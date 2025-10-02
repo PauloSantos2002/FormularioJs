@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Frontend Mentor | Contact form</title>
+
+</head>
+<body>
+
+  <form id="formulario">
+
+    <h1>Contact Us</h1>
+    <section class="userNames flex">
+      <section>
+        <label for="">First Name</label>
+        <input type="text" name="firstName" id="firstName">
+        <span>This field is required</span>
+      </section>
+      <section>
+        <label for="">Last Name</label>
+        <input type="text" name="lastName" id="lastName">
+        <span>This field is required</span>
+      </section>
+    </section>
+    
+    <section class="email flex">
+      <label for="">Email Address</label>
+      <input type="text" name="" id="">
+      <span>Please enter a valid email address</span>
+      <span>This field is required</span>
+    </section>
+
+    <section class="queryType " >
+      <label for="">Query Type</label>
+      <section class="typeOption flex">
+        <div class="option flex"> <input type="radio" name="queryOption" id="optionGeneral" ><p>General Enquiry</p></div>
+        <div class="option flex"> <input type="radio" name="queryOption" id="optionalSupport"><p>Support Request</p></div>
+      </section>
+      <span>Please select a query type</span>
+    </section>
+
+    <section class="message flex">
+      <label for="">Message</label>
+      <input type="text" name="message" id="message" class="messageInput">
+      <span>This field is required</span>
+      <p>I consent to being contacted by the team. To submit this form, please consent to being contacted</p>
+      <input type="button" class="submitButtom" value="Submit">
+    </section>
+
+    <section class="messageSend">
+      Message Sent!
+      Thanks for completing the form. We'll be in touch soon!
+    </section>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
