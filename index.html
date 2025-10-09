@@ -13,48 +13,56 @@
 
   <form id="formulario">
 
-    <h1>Contact Us</h1>
+    <h1>Contact Us </h1>
     <section class="userNames flex">
       <section>
-        <label for="">First Name</label>
+        <label for="">First Name *</label>
         <input type="text" name="firstName" id="firstName">
         <span>This field is required</span>
       </section>
       <section>
-        <label for="">Last Name</label>
+        <label for="">Last Name *</label>
         <input type="text" name="lastName" id="lastName">
         <span>This field is required</span>
       </section>
     </section>
     
     <section class="email flex">
-      <label for="">Email Address</label>
+      <label for="">Email Address *</label>
       <input type="text" name="" id="">
       <span>Please enter a valid email address</span>
       <span>This field is required</span>
     </section>
 
     <section class="queryType " >
-      <label for="">Query Type</label>
+      <label for="">Query Type *</label>
       <section class="typeOption flex">
         <div class="option flex"> <input type="radio" name="queryOption" id="optionGeneral" ><p>General Enquiry</p></div>
         <div class="option flex"> <input type="radio" name="queryOption" id="optionalSupport"><p>Support Request</p></div>
       </section>
       <span>Please select a query type</span>
+      
     </section>
 
     <section class="message flex">
-      <label for="">Message</label>
+      <label for="">Message *</label>
       <input type="text" name="message" id="message" class="messageInput">
       <span>This field is required</span>
-      <p>I consent to being contacted by the team. To submit this form, please consent to being contacted</p>
-      <input type="button" class="submitButtom" value="Submit">
+      <section>
+        <input type="checkbox"> I consent to being contacted by the team.</input>
+      </section>
+      <button type="button" class="submitButtom" onclick="validar()">Submit</button>
     </section>
 
-    <section class="messageSend">
-      Message Sent!
-      Thanks for completing the form. We'll be in touch soon!
+    <section class="messageSend" id="messageSendId">
+      <section>
+        <img src="assets/images/icon-success-check.svg" alt="">
+        <h2>Message Sent! </h2>
+        <span></span>
+      </section>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
     </section>
+
   </form>
   <script src="script.js"></script>
 </body>

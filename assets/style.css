@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80dvh;
+    height: 100dvh;
     background-color: hsl(148, 38%, 91%);
 }
 
@@ -36,6 +36,16 @@ span{
     font-size: 12px;
     display: none;
 }
+
+.erroSpan{
+    display: block;
+}
+.erroInput{
+    border: 2px solid rgb(173, 21, 21);
+}
+.mostrar{
+    display: block; 
+}
 /* ======================================================= */
 .userNames{
     gap: 20px;
@@ -48,6 +58,9 @@ span{
 input{
     border: 1px solid hsl(169, 82%, 27%); 
     border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 0;
+    font-size: 1.3rem;
 }
 /* ======================================================= */
 .email{
@@ -66,7 +79,7 @@ input{
 .queryType .option{
     border: 1px solid hsl(169, 82%, 27%);
     border-radius: 10px;
-    padding: 5px 5px 5px 20px;
+    padding: 10px 10px 10px 20px;
     width: 50%;
     display: flex;
     gap: 10px;
@@ -77,22 +90,43 @@ input{
 }
 .messageInput{
     min-height: 100px;
+    margin-bottom: 20px;
+}
+.message section{
+    margin: 30px 0;
 }
 .submitButtom{
-    padding: 5px;
+    padding: 20px;
+    border-radius: 10px;
     font-size: 1.8;
     background-color: hsl(169, 82%, 27%);
     color: white;
+    margin-top: 20px;
 }
 /* ======================================================= */
 .messageSend{
     position: absolute;
     top: 30px;
-    background-color: grey;
-    color: white;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: hsl(187, 24%, 22%);
     padding: 15px;
+    min-width: 400px;
     text-align: center;
     border-radius: 20px;
     display: none;
 
+}
+.messageSend > p, h2{
+    color: white;
+}
+.messageSend section{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+@media(max-width: 600px){
+    .userNames{
+        flex-direction: column;
+    }
 }
